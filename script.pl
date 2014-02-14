@@ -65,6 +65,7 @@ foreach $file(@files)
             }
 	    else
             {
+                print("Successfully built for ".$studentPath."\n");
                 copy($exeLocationPerl, $studentSubmitPath) or die $!;
             }
           }

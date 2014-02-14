@@ -9,6 +9,6 @@
 
 @goto :EOF
 
-:showerror
+:onError
 @popd
 @exit /B 1
