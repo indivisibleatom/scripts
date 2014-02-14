@@ -63,7 +63,10 @@ foreach $file(@files)
             {
                 print("Could not build for ".$studentPath."\n");
             }
-            copy($exeLocationPerl, $studentSubmitPath) or die $!;
+	    else
+            {
+                copy($exeLocationPerl, $studentSubmitPath) or die $!;
+            }
           }
         }
     }
