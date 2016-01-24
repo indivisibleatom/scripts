@@ -12,10 +12,16 @@ doskey f=findstr /spinr $*
 doskey cp=copy $*
 doskey ls=dir
 doskey p=popd
+doskey rm=del $*
+doskey mv=move $*
 
+doskey home=pushd %userprofile% $*
 doskey dev=pushd %DEV%
 doskey desk=pushd %USER%"\Desktop"
 doskey down=pushd %DOWN%
+
+set backupdir=.\.backup,.,%TEMP%
+set directory=.,.\.backup,%TEMP%
 
 REM ##Important tools##
 doskey vim=%TOOLS%"\Vim\vim74\vim" $*
@@ -24,6 +30,7 @@ doskey git=%TOOLS%"\git\bin\git.exe" $*
 doskey tex=%TOOLS%"\texmaker\texmaker.exe" $*
 doskey zip=%TOOLS%"\tools\7-Zip\7z.exe" $*
 doskey cygwin=%TOOLS%"\tools\cygwin\Cygwin.bat"
+doskey ipy=jupyter notebook
 REM doskey eclipse=%TOOLS%"\eclipse\eclipse.exe" $*
 REM doskey scpc="c:\Development\tools\winscp\winscp.com"
 
@@ -36,6 +43,10 @@ doskey playu=%TOOLS%"\vlc\vlc.exe" --vout none -vvv $*
 doskey white=%TOOLS%"\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=vcJ-o_fh1B4"
 doskey bach=%TOOLS%"\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=6JQm5aSjX6g"
 doskey hindi=%TOOLS%"\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=Md3sr5d5Ofk&list=PLfI1Xkk7LAC7Qvuhs_Du7Jswhbucm_49P"
+
+REM ##Georgia Tech classes##
+doskey classes=pushd %DEV%"\classes"
+doskey pr=pushd %DEV%"\classes\patternRec"
 
 REM $$PATH additions##
 @echo off
