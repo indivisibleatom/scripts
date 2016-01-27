@@ -1,4 +1,4 @@
-
+#Receives the current directory as first argument. Calls bash with linux style filepath for it
 import sys
 import re
 import os

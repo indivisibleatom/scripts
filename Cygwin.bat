@@ -1,4 +1,5 @@
 @echo off
+REM CDs to the current directory when cygwin is launched
 
 SET LASTDIR=%CD%
 
