@@ -30,7 +30,9 @@ doskey git="%TOOLS%\git\bin\git.exe" $*
 doskey tex="%TOOLS%\texmaker\texmaker.exe" $*
 doskey zip="%TOOLS%\7-Zip\7z.exe" $*
 doskey cygwin="%TOOLS%\cygwin\Cygwin.bat"
-doskey ipy=jupyter notebook
+doskey meld="%TOOLS%\meld\Meld.exe" $*
+doskey ipy=jupyter notebook $*
+doskey paint=mspaint $*
 REM doskey eclipse="%TOOLS%\eclipse\eclipse.exe" $*
 REM doskey scpc="%TOOLS\winscp\winscp.com"
 
