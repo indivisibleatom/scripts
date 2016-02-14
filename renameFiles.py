@@ -5,12 +5,12 @@ import os
 import sys
 import re
 
-#Convert file to begin with small alpha, unless all are the
+#Convert file to begin with small alpha, unless the first two
 #letters in the first word are caps
 def renameSmall(fileName): 
     firstWord = fileName.partition(' ')
     newName = fileName;
-    if not firstWord[0].isupper():
+    if not firstWord[0][:2].isupper():
         newName = fileName[:1].lower() + fileName[1:]
     return newName;
   
@@ -29,8 +29,10 @@ if __name__ == "__main__":
             else:
                 recursive = False
             globString = "**/*.*" if recursive else "*.*"
-            for fileName in glob.glob(globString):
-                fileNameNoExt = os.path.splitext(fileName)[0]
-                newName = operationFunc(fileNameNoExt)
-                print(newName);
-            #os.rename(file,` 
+            renameOperation = os.rename if len(sys.argv
+                  ) >=5 and sys.argv[4] =="run" else print
+            for filePath in glob.glob(globString):
+                filePathNoExt, ext = os.path.splitext(filePath)
+                dirName, fileName = os.path.split(filePathNoExt)
+                newName = operationFunc(fileName)
+                renameOperation(filePath, os.path.join(dirName, newName + ext))

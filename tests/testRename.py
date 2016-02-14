@@ -6,8 +6,8 @@ class renameSmallTest(unittest.TestCase):
     def testRenameSmall(self):
         self.assertTrue(rn.renameSmall("asdb") == "asdb")
         self.assertTrue(rn.renameSmall("Asbd") == "asbd")
-        self.assertTrue(rn.renameSmall("ABbd") == "aBbd")
-        self.assertTrue(rn.renameSmall("ABS") == "ABS")
+        self.assertTrue(rn.renameSmall("ABbd") == "ABbd")
+        self.assertTrue(rn.renameSmall("S/Abs") == "S/Abs")
 
 def main():
     unittest.main()
