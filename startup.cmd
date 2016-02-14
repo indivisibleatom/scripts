@@ -7,6 +7,10 @@ SET DEV=%1\development
 SET DOWN=%1\downloads
 SET USER=%userprofile%
 
+REM PATH additions
+set PATH=%PATH%;%TOOLS%\bin\;%TOOLS%\anaconda\;
+
+REM aliases
 doskey ..=cd ..
 doskey f=findstr /spinr $*
 doskey cp=copy $*
@@ -14,14 +18,10 @@ doskey ls=dir $*
 doskey p=popd
 doskey rm=del $*
 doskey mv=move $*
-
 doskey home=pushd %userprofile% $*
 doskey dev=pushd %DEV%
 doskey desk=pushd "%USER%\Desktop"
 doskey down=pushd %DOWN%
-
-set backupdir=.\.backup,.,%TEMP%
-set directory=.,.\.backup,%TEMP%
 
 REM ##Important tools##
 doskey vim="%TOOLS%\Vim\vim74\vim" $*
@@ -50,16 +50,9 @@ REM ##Georgia Tech classes##
 doskey classes=pushd "%DEV%\classes"
 doskey pr=pushd "%DEV%\classes\patternRec"
 
-REM $$PATH additions##
-@echo off
-REM set PATH=%PATH%;c:\Development\tools\nodejs
-REM set PATH=%PATH%;c:\Installed\MySQL\MySQL Server 5.6\bin
-REM set PATH=%PATH%;c:\Development\tools\maven\bin
-REM set PATH=%PATH%;C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\amd64
-REM set PATH=%PATH%;C:\Program Files (x86)\CMake 2.8\bin
-REM set PATH=%PATH%;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
-REM set JAVA_HOME=c:\Development\tools\jdk
-REM set PATH=%PATH%;C:\Development\tools\cmdUtils
-REM set PATH=%PATH%;C:\Installed\cmdUtils
-REM set PATH=%PATH%;C:\Development\tools\cuda\toolkit\bin
-@echo on
+REM tools specific settings
+REM RenderMan
+set RMANTREE=%TOOLS%\renderman\RendermanProServer-20.7
+set RMSTREE=%TOOLS%\renderman\RenderManStudio-20.7-maya2016
+set PATH="%PATH%:%RMANTREE%\bin"
+
