@@ -8,7 +8,10 @@ SET DOWN=%1\downloads
 SET USER=%userprofile%
 
 REM PATH additions
-set PATH=%PATH%;%TOOLS%\bin\;%TOOLS%\anaconda\;
+SET PATH=%PATH%;%TOOLS%\bin;%TOOLS%\anaconda;%TOOLS%\cmake\bin
+SET PATH=%PATH%;%TOOLS%\anaconda\Scripts;%TOOLS%\julia\bin
+SET PATH=%PATH%;%TOOLS%\miktex\miktex\bin\x64;%TOOLS%\imagemagick
+SET PATH=%PATH%;%TOOLS%\git\cmd
 
 REM aliases
 doskey ..=cd ..
@@ -22,6 +25,7 @@ doskey home=pushd %userprofile% $*
 doskey dev=pushd %DEV%
 doskey desk=pushd "%USER%\Desktop"
 doskey down=pushd %DOWN%
+doskey clear=cls
 
 REM ##Important tools##
 doskey vim="%TOOLS%\Vim\vim74\vim" $*
@@ -42,7 +46,7 @@ REM doskey box = pushd "%USER%\Dropbox"
 
 REM ##Play ze music##
 doskey playu="%TOOLS%\vlc\vlc.exe" --vout none -vvv $*
-doskey white="%TOOLS%\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=vcJ-o_fh1B4"
+doskey white="%TOOLS%\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=wzjWIxXBs_s"
 doskey bach="%TOOLS%\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=6JQm5aSjX6g"
 doskey hindi="%TOOLS%\vlc\vlc.exe" --vout none -vvv "https://www.youtube.com/watch?v=Md3sr5d5Ofk&list=PLfI1Xkk7LAC7Qvuhs_Du7Jswhbucm_49P"
 
@@ -54,5 +58,5 @@ REM tools specific settings
 REM RenderMan
 set RMANTREE=%TOOLS%\renderman\RendermanProServer-20.7
 set RMSTREE=%TOOLS%\renderman\RenderManStudio-20.7-maya2016
-set PATH="%PATH%:%RMANTREE%\bin"
+SET PATH=%PATH%;"%RMANTREE%\bin"
 

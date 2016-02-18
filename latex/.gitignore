@@ -1,0 +1,11 @@
+# Latex files:
+*.spl
+*.gz
+*.log
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.cmd
+*.swp
+
