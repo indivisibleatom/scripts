@@ -8,6 +8,8 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set shiftround
+set textwidth=79
+set formatoptions+=t
 
 "View unprinted whitespaces
 set list
@@ -15,8 +17,9 @@ set listchars=tab:>-,trail:.,extends:#,nbsp:.
 
 "Mappings
 let mapleader=","
-:command -nargs=* Make make <args> | cwindow 3
-:map <Leader><F5> :silent Make\|redraw!\|cw<CR>
+command -nargs=* Make make <args> | cwindow 3
+map <Leader>r :w<CR>:silent Make\|redraw!\|cw<CR>
+inoremap jj <esc>
 
 filetype off
 filetype plugin indent off

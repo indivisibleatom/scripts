@@ -1,0 +1,22 @@
+## Vim ignores
+*.swp
+
+## Ipython ignores
+*.py[co]
+__pycache__
+.ipynb_checkpoints
+
+## Latex
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fdb_latexmk
+
+## Intermediate documents:
+*.dvi
