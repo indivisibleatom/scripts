@@ -17,6 +17,8 @@ __pycache__
 *.toc
 *.fmt
 *.fdb_latexmk
+*.bbl
+*.blg
 
 ## Intermediate documents:
 *.dvi
