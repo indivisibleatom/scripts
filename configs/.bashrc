@@ -9,7 +9,6 @@ set -o vi
 
 export PATH="${PATH}:${SHARED_ROOT}/bin"
 
-
 #Custom env variables for different things
 export TEXMF_ROOT=~/texmf
 
@@ -22,12 +21,15 @@ export PATH="${CUDA_HOME}/bin:$PATH"
 if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
   export PATH="${PATH}:${TOOLS}/processing/processing-3.0.2"
 fi
+export PATH="${PATH}:${TOOLS}/graphicsDebugger"
+export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
 
 #I need boost
 export BOOST_ROOT=/usr/include
 export BOOST_LIBRARYDIR=/usr/lib/x86_64-linux-gnu
 
 #And mostly OGRE too
+export OGRE_HOME=${EXT}/src/ogre
 
 #Deep learning adventures
 export CAFFE_ROOT=~/development/deepLearning/caffe

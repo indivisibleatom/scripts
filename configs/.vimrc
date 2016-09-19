@@ -12,7 +12,14 @@ set shiftround
 set textwidth=79
 set formatoptions+=t
 set showmatch
-"View column numbers
+
+"Clang format
+:function FormatFile()
+:  let l:lines="all"
+:  pyf ${DEV}/scripts/configs/clang-format.py<cr>
+:endfunction
+map <C-I>:pyf ${DEV}/scripts/configs/clang-format.py<cr>
+imap <C-I> <c-o>:pyf ${DEV}/scripts/configs/clang-format.py<cr>
 
 "View unprinted whitespaces
 set list

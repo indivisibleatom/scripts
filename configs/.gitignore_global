@@ -1,5 +1,9 @@
+# Some common folders to exclude
+build/
+
 ## Vim ignores
 *.swp
+*.swo
 
 ## Ipython ignores
 *.py[co]
