@@ -16,5 +16,6 @@ alias exp='pushd ${DEV}/experiments/'
 alias ext='pushd ${DEV}/ext/'
 alias cpputils='pushd ${DEV}/cpputils/'
 alias smooth='pushd ${DEV}/experiments/smoothing/'
+alias ack='ack-grep'
 
 alias gprofile=voglProfile
