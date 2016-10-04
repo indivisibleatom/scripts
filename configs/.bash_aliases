@@ -20,6 +20,9 @@ alias geom='pushd ${DEV}/experiments/framework/geometry'
 alias render='pushd ${DEV}/experiments/framework/rendering'
 alias inc='pushd ${DEV}/experiments/framework/inc'
 alias app='pushd ${DEV}/experiments/framework/app'
+
+alias scripts='pushd ${DEV}/scripts/'
+alias configs='pushd ${DEV}/scripts/configs'
 alias ack='ack-grep'
 
 alias gprofile=voglProfile
