@@ -15,7 +15,11 @@ alias b='cd build'
 alias exp='pushd ${DEV}/experiments/'
 alias ext='pushd ${DEV}/ext/'
 alias cpputils='pushd ${DEV}/cpputils/'
-alias smooth='pushd ${DEV}/experiments/smoothing/'
+alias avg='pushd ${DEV}/experiments/averaging'
+alias geom='pushd ${DEV}/experiments/framework/geometry'
+alias render='pushd ${DEV}/experiments/framework/rendering'
+alias inc='pushd ${DEV}/experiments/framework/inc'
+alias app='pushd ${DEV}/experiments/framework/app'
 alias ack='ack-grep'
 
 alias gprofile=voglProfile
