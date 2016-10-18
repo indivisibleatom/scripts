@@ -11,6 +11,7 @@ export PATH="${PATH}:${SHARED_ROOT}/bin"
 
 #Custom env variables for different things
 export TEXMF_ROOT=~/texmf
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
 export GTEST_ROOT=${EXT}

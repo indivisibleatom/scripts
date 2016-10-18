@@ -12,6 +12,8 @@ set shiftround
 set textwidth=79
 set formatoptions+=t
 set showmatch
+" Match angle braces
+set matchpairs+=<:>
 
 "Clang format
 :function FormatFile()
@@ -62,18 +64,26 @@ nnoremap <space> za
 
 noremap <F3> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
-"Play nice with Cmake C++ projects
-let types = ['c', 'cpp', 'cxx']
-if index(types, &filetype) == -1
-  command! -nargs=* Make make <args> | cwindow 3
-else
-  command! -nargs=* Make make -C build/%:h:h <args> | cwindow 3
-endif
+-"Play nice with Cmake C++ projects
+-let types = ['c', 'cpp', 'cxx']
+-if index(types, &filetype) == -1
+-  command! -nargs=* Make make <args> | cwindow 3
+-else
+-  command! -nargs=* Make make -C build/%:h:h <args> | cwindow 3
+-endif
 
 map <Leader>r :w<CR>:silent Make\|redraw!\|cw<CR>
 
 noremap <F5> :Autoformat<CR>
-
 nmap <leader><F2> :NERDTreeToggle<CR>
+nmap <leader>b :CtrlPBuffer
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" Quickfix new split
+autocmd! FileType qf nnoremap <buffer> <leader><Enter> <C-w><Enter><C-w>L
 "----------------------------------End mappings-------------------
 
