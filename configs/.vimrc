@@ -51,9 +51,8 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+let g:syntastic_cpp_compiler_options = ' -std=c++14'
 let g:syntastic_cpp_no_default_include_dirs = 0
 
 "------------------------------------Mappings---------------------
@@ -65,12 +64,12 @@ nnoremap <space> za
 noremap <F3> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 -"Play nice with Cmake C++ projects
--let types = ['c', 'cpp', 'cxx']
--if index(types, &filetype) == -1
--  command! -nargs=* Make make <args> | cwindow 3
--else
--  command! -nargs=* Make make -C build/%:h:h <args> | cwindow 3
--endif
+let types = ['c', 'cpp', 'cxx']
+if index(types, &filetype) == -1
+  command! -nargs=* Make make <args> | cwindow 3
+else
+  command! -nargs=* Make make -C build/%:h:h <args> | cwindow 3
+endif
 
 map <Leader>r :w<CR>:silent Make\|redraw!\|cw<CR>
 

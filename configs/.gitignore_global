@@ -1,6 +1,9 @@
 # Some common folders to exclude
 build/
 
+# Some temporary files
+*.*~
+
 ## Vim ignores
 *.swp
 *.swo
