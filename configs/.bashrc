@@ -15,7 +15,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
 export GTEST_ROOT=${EXT}
-export CUDA_HOME=/usr/local/cuda-7.5
+export CUDA_HOME=/usr/local/cuda-8.0
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
 
 export PATH="${CUDA_HOME}/bin:$PATH"
