@@ -10,7 +10,7 @@ set -o vi
 export PATH="${PATH}:${SHARED_ROOT}/bin"
 
 #Custom env variables for different things
-export TEXMF_ROOT=~/texmf
+export TEXMF_ROOT=/usr/local/share/texmf
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
