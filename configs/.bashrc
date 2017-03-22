@@ -35,4 +35,3 @@ export OGRE_HOME=${EXT}/src/ogre
 #Deep learning adventures
 export CAFFE_ROOT=~/development/deepLearning/caffe
 export PYTHONPATH=${PYTHONPATH}:${CAFFE_ROOT}/python
-source /opt/intel/mkl/bin/mklvars.sh intel64
