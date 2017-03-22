@@ -1,0 +1,6 @@
+# Settings for readline
+set show-mode-in-prompt on
+
+# Settings for search history 
+"\e[A":history-search-backward
+"\e[B":history-search-forward

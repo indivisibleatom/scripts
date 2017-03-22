@@ -21,6 +21,8 @@ alias geom='pushd ${DEV}/experiments/framework/geometry'
 alias render='pushd ${DEV}/experiments/framework/rendering'
 alias inc='pushd ${DEV}/experiments/framework/inc'
 alias app='pushd ${DEV}/experiments/framework/app'
+alias ceed='(pushd ${EXT}/src/ceed/bin;
+PYTHONPATH=../../cegui/build/lib:../:$PYTHONPATH python2 ./ceed-gui)'
 
 alias scripts='pushd ${DEV}/scripts/'
 alias configs='pushd ${DEV}/scripts/configs'

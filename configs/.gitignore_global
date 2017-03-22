@@ -27,6 +27,22 @@ __pycache__
 *.bbl
 *.blg
 
+# Some Visual Studio temporaries and build locations
+*.pdb
+*.opendb
+*.opensdf
+Debug/
+ipch/
+obj/
+lib/
+x64/
+.vs/
+*.suo
+*.sdf
+*.user
+*.psess
+*.vspx
+
 ## Intermediate documents:
 *.dvi
 

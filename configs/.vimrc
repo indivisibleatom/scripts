@@ -34,7 +34,12 @@ filetype plugin indent on
 syntax on
 
 "Autos
+" Spelling for tex files
 autocmd BufNewFile,BufRead *.tex set spell
+" Error highlighting for cerr files (credits: Mani Zandifar -
+" http://stackoverflow.com/questions/6914434/how-to-save-the-error
+" -output-of-gcc-to-file)"
+au BufRead,BufNewFile *.cerr set filetype=cerr
 
 "Plugins
 "Colors
@@ -53,7 +58,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options = ' -std=c++14'
+let g:syntastic_cpp_compiler_options = '-std=c++14'
 let g:syntastic_cpp_no_default_include_dirs = 0
 
 "------------------------------------Mappings---------------------
