@@ -9,6 +9,7 @@ alias pip='pip3'
 alias python='python3'
 alias ipy='ipython3 notebook'
 alias n='nautilus'
+alias initlatex='cp ${DEV}/shared/latex/src/protoDir/* .'
 
 alias b='pushd ${DEV}/experiments/build'
 
