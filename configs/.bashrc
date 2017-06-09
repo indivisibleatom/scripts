@@ -26,4 +26,4 @@ export PATH="${PATH}:${TOOLS}/graphicsDebugger"
 export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
 
 #Python path
-export PYTHONPATH="${DEV}/ext/src/bin/python"
+export PYTHONPATH="${PYTHONPATH}:${DEV}/ext/src/bin/python:${DEV}/build/python"
