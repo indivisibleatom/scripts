@@ -26,3 +26,5 @@ export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
 
 export TEXDOC_VIEWER_PDF="(evince %s) &"
 
+#Python path
+export PYTHONPATH="${PYTHONPATH}:${DEV}/ext/src/bin/python:${DEV}/build/python"

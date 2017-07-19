@@ -8,7 +8,9 @@ alias ..='cd ..'
 alias pip='pip3'
 alias python='python3'
 alias ipy='ipython3 notebook'
+alias processing='${DEV}/tools/processing-3.3/processing'
 alias n='nautilus'
+alias initlatex='cp ${DEV}/shared/latex/src/protoDir/* .'
 
 alias b='pushd ${DEV}/experiments/build'
 
@@ -21,11 +23,13 @@ alias geom='pushd ${DEV}/experiments/framework/geometry'
 alias render='pushd ${DEV}/experiments/framework/rendering'
 alias inc='pushd ${DEV}/experiments/framework/inc'
 alias app='pushd ${DEV}/experiments/framework/app'
-alias ceed='(pushd ${EXT}/src/ceed/bin;
-PYTHONPATH=../../cegui/build/lib:../:$PYTHONPATH python2 ./ceed-gui)'
-
+alias papers='pushd ${DEV}/papers'
+alias ceed='(pushd ${EXT}/src/ceed/bin; PYTHONPATH=../../cegui/build/lib:../:$PYTHONPATH python2 ./ceed-gui)'
 alias scripts='pushd ${DEV}/scripts/'
 alias configs='pushd ${DEV}/scripts/configs'
 alias ack='ack-grep'
 
 alias gprofile=voglProfile
+
+# Additional build script aliases
+source ${DEV}/buildScripts.sh

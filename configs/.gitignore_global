@@ -48,3 +48,5 @@ x64/
 
 ## LibreOffice locks
 *.odp#
+*.odt#
+*.csv#
