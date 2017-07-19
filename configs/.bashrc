@@ -23,3 +23,6 @@ if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
 fi
 export PATH="${PATH}:${TOOLS}/graphicsDebugger"
 export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
+
+export TEXDOC_VIEWER_PDF="(evince %s) &"
+
