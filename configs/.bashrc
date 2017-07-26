@@ -24,6 +24,8 @@ if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
 fi
 export PATH="${PATH}:${TOOLS}/graphicsDebugger"
 export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
+export PATH="${PATH}:./node_modules/.bin"
 
 #Python path
-export PYTHONPATH="${PYTHONPATH}:${DEV}/ext/src/bin/python:${DEV}/build/python"
+export
+PYTHONPATH="${DEV}/ext/src/bin/python:${DEV}/build/python:/usr/local/lib/python3.5/site-packages:/usr/local/lib/python3.5/site-packages/vtk:${PYTHONPATH}"
