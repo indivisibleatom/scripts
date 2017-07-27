@@ -15,9 +15,9 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
 export CUDA_HOME=/usr/local/cuda-8.0
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_HOME}/lib64
+export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
-export PATH="${EXT}/binaries; ${CUDA_HOME}/bin:$PATH"
+export PATH="${EXT}/binaries:${CUDA_HOME}/bin:$PATH"
 
 if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
   export PATH="${PATH}:${TOOLS}/processing/processing-3.0.2"
@@ -29,6 +29,9 @@ export PATH="${PATH}:./node_modules/.bin"
 
 export TEXDOC_VIEWER_PDF="(evince %s) &"
 
-#Python path
-export
-PYTHONPATH="${DEV}/ext/src/bin/python:${DEV}/build/python:/usr/local/lib/python3.5/site-packages:/usr/local/lib/python3.5/site-packages/vtk:${PYTHONPATH}"
+#VTK paths
+export VTK_PATH=/usr/local/VTK
+export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
+export LD_LIBRARY_PATH="${VTK_PATH}/lib:${LD_LIBRARY_PATH}"
+
+export PYTHONPATH="${DEV}/ext/src/bin/python:${DEV}/build/python:${PYTHONPATH}"
