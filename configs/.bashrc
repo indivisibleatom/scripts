@@ -15,6 +15,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
 export CUDA_HOME=/usr/local/cuda-8.0
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
 export PATH="${EXT}/binaries:${CUDA_HOME}/bin:$PATH"
@@ -34,4 +35,6 @@ export VTK_PATH=/usr/local/VTK
 export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
 export LD_LIBRARY_PATH="${VTK_PATH}/lib:${LD_LIBRARY_PATH}"
 
-export PYTHONPATH="${DEV}/ext/src/bin/python:${DEV}/build/python:${PYTHONPATH}"
+export PYTHONPATH="${EXT}/src/bin/python:${PYTHONPATH}"
+export PYTHONPATH="${EXT}/src/bin/python/lib/python3.5/site-packages:${PYTHONPATH}"
+export PYTHONPATH="${DEV}/build/python:${PYTHONPATH}"
