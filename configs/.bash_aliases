@@ -32,4 +32,6 @@ alias ack='ack-grep'
 alias gprofile=voglProfile
 
 # Additional build script aliases
-source ${DEV}/buildScripts.sh
+if [ -f ${DEV}/buildScripts.sh ]; then
+  source ${DEV}/buildScripts.sh;
+fi

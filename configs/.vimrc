@@ -14,6 +14,7 @@ set formatoptions+=t
 set showmatch
 " Match angle braces
 set matchpairs+=<:>
+set clipboard=unnamedplus
 
 "Clang format
 :function FormatFile()
