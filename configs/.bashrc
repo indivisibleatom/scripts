@@ -14,10 +14,10 @@ export TEXMF_ROOT=/usr/local/share/texmf
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 #Development environment variables
-export CUDA_HOME=/usr/local/cuda-8.0
+export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
-export PATH="${EXT}/binaries:${CUDA_HOME}/bin:$PATH"
+export PATH="${EXT}/build/bin:${EXT}/binaries:${CUDA_HOME}/bin:${PATH}"
 
 if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
   export PATH="${PATH}:${TOOLS}/processing/processing-3.0.2"
@@ -34,8 +34,8 @@ export VTK_PATH=/usr/local/VTK
 export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
 export LD_LIBRARY_PATH="${VTK_PATH}/lib:${LD_LIBRARY_PATH}"
 
-export PYTHONPATH="${EXT}/src/bin/python:${PYTHONPATH}"
-export PYTHONPATH="${EXT}/src/bin/python/lib/python3.5/site-packages:${PYTHONPATH}"
-export PYTHONPATH="${DEV}/build/python:${PYTHONPATH}"
-
-export LD_LIBRARY_PATH="${EXT}/src/bin/python/lib:${LD_LIBRARY_PATH}"
+#Paths for self-build python modules and related libraries
+export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
+export PYTHONPATH="${EXT}/build/lib:${PYTHONPATH}"
+export PYTHONPATH="${DEV}/build/Release/python:${PYTHONPATH}"
+export LD_LIBRARY_PATH=${EXT}/build/lib:${LD_LIBRARY_PATH}
