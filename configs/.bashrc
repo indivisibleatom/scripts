@@ -39,4 +39,4 @@ export PYTHONPATH="${EXT}/build/lib:${PYTHONPATH}"
 export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib/python:${PYTHONPATH}"
-export LD_LIBRARY_PATH=${EXT}/build/lib:${LD_LIBRARY_PATH}
+export LD_LIBRARY_PATH=${EXT}/build/lib:${EXT}/binaries/lib64:${LD_LIBRARY_PATH}
