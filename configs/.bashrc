@@ -17,7 +17,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
-export PATH="${EXT}/build/bin:${EXT}/binaries:${CUDA_HOME}/bin:${PATH}"
+export PATH="${EXT}/bin:${EXT}/binaries:${EXT}/build/bin:${CUDA_HOME}/bin:${PATH}"
 
 if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
   export PATH="${PATH}:${TOOLS}/processing/processing-3.0.2"
