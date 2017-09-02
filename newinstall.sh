@@ -22,6 +22,7 @@ sudo apt-get install meld
 sudo apt-get install git
 
 # Copy over configs 
+copy ${DEV}/scripts/configs/.gbdinit ~/.gdbinit
 copy ${DEV}/scripts/configs/.latexmkrc ~/.latexmkrc
 ln -T ${DEV}/scripts/configs/inkscape_keybindings.xml ~/.config/inkscape/keys/default.xml
 
