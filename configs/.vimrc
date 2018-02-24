@@ -49,6 +49,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+let g:vim_markdown_folding_disabled = 1
+
 "Syntastic
 set statusline=%f
 set statusline+=\ col:%c

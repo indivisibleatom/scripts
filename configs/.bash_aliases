@@ -9,8 +9,10 @@ alias pip='pip3'
 alias python='python3'
 alias ipy='ipython3 notebook'
 alias processing='${DEV}/tools/processing-3.3/processing'
-alias n='nautilus'
+alias n='nautilus >/dev/null 2>&1'
 alias initlatex='cp ${DEV}/shared/latex/src/protoDir/* .'
+alias meshlab='meshlab.sh'
+alias meshlabserver='meshlabserver.sh'
 
 alias b='pushd ${DEV}/experiments/build'
 

@@ -6,3 +6,6 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local/VTK-8.0.0 \
 # Boost install
 ./bootstrap.sh --prefix=/usr/local --with-libraries=all --libdir=/usr/local/lib \
   --includedir=/usr/local/include 
+
+# Python installation
+sudo ./configure --enable-shared --prefix=/usr/local LDFLAGS="-Wl,--rpath=/usr/local/lib"
