@@ -27,6 +27,13 @@ imap <C-I> <c-o>:pyf ${DEV}/scripts/configs/clang-format.py<cr>
 "View unprinted whitespaces
 set list
 set listchars=tab:>-,trail:.,extends:#,nbsp:.
+" Incremental search and highlight
+set incsearch
+set hlsearch
+" Code folding
+set foldmethod=indent
+set nofoldenable
+set foldlevel=1
 
 filetype off
 filetype plugin indent off
@@ -90,6 +97,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
 
 " Quickfix new split
 autocmd! FileType qf noremap <buffer> <Leader><Enter> <C-w><Enter><C-w>L

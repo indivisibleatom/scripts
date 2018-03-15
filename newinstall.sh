@@ -20,6 +20,7 @@ sudo apt-get install inkscape
 sudo apt-get install krita
 sudo apt-get install meld
 sudo apt-get install git
+sudo apt-get install moreutils
 
 # Copy over configs 
 copy ${DEV}/scripts/configs/.gbdinit ~/.gdbinit
