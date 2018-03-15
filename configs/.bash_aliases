@@ -5,8 +5,8 @@ voglProfile() {
 }
 
 alias ..='cd ..'
-alias pip='pip3'
-alias python='python3'
+alias pip3='/usr/bin/pip3'
+alias python3='/usr/bin/python3'
 alias ipy='ipython3 notebook'
 alias processing='${DEV}/tools/processing-3.3/processing'
 alias n='nautilus >/dev/null 2>&1'
@@ -30,6 +30,7 @@ alias ceed='(pushd ${EXT}/src/ceed/bin; PYTHONPATH=../../cegui/build/lib:../:$PY
 alias scripts='pushd ${DEV}/scripts/'
 alias configs='pushd ${DEV}/scripts/configs'
 alias ack='ack-grep'
+alias ccViewer='ccViewer.sh'
 
 alias gprofile=voglProfile
 

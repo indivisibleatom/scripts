@@ -19,14 +19,17 @@ export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 
 export PATH="${EXT}/build/bin:${EXT}/binaries:${CUDA_HOME}/bin:${PATH}"
 export GOPATH="${EXT}/binaries/gopath"
-export PATH="/usr/local/go/bin:${GOPATH}:${GOPATH}/bin:${PATH}"
+export PATH="${HOME}/bin:/usr/local/go/bin:${GOPATH}:${GOPATH}/bin:${PATH}"
 
 if [ -d "${TOOLS}/processing/processing-3.0.2" ]; then
   export PATH="${PATH}:${TOOLS}/processing/processing-3.0.2"
 fi
 
+if [ -z "${CMDREF_DIR}" ]; then
+  export CMDREF_DIR=${DEV}/notes
+fi
+
 export PATH="${PATH}:${TOOLS}/graphicsDebugger"
-export PATH="${PATH}:${TOOLS}/vogl/vogl/vogl_build"
 export PATH="${PATH}:./node_modules/.bin"
 
 export TEXDOC_VIEWER_PDF="(evince %s) &"
