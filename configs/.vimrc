@@ -1,4 +1,4 @@
-"Basic
+" Basic
 set nu
 set ai
 set backspace=indent,eol,start
@@ -12,12 +12,14 @@ set shiftround
 set textwidth=79
 set formatoptions+=t
 set showmatch
+set modeline
 " Match angle braces
+"
 set matchpairs+=<:>
 set clipboard=unnamedplus
 
 "Clang format
-:function FormatFile()
+function FormatFile()
 :  let l:lines="all"
 :  pyf ${DEV}/scripts/configs/clang-format.py<cr>
 :endfunction
@@ -64,12 +66,13 @@ set statusline+=\ col:%c
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options = '-std=c++14 -Wno-deprecated-declarations'
 let g:syntastic_cpp_no_default_include_dirs = 0
+
+let g:ycm_show_diagnostics_ui = 0
 
 "------------------------------------Mappings---------------------
 "Clear spaces with F3
@@ -87,7 +90,11 @@ else
   command! -nargs=* Mk make! -C build/%:h:h <args> | cwindow 3
 endif
 
-map <Leader>r :w<CR>:silent Mk\|redraw!\cw<CR>
+" Save file and then run make upon Ctrl-R -- we have setup things to map the
+" run to different commands for certain filetypes. This is fallback
+if mapcheck("<Leader>r") == ""
+  nnoremap <buffer> <Leader>r :w<CR>:silent Mk\|redraw!<CR>
+endif
 
 noremap <F5> :Autoformat<CR>
 nmap <leader><F2> :NERDTreeToggle<CR>
@@ -98,10 +105,14 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-
 " Quickfix new split
 autocmd! FileType qf noremap <buffer> <Leader><Enter> <C-w><Enter><C-w>L
-" Run in background and launch evince for latex
-autocmd! FileType tex noremap <Leader>r :w<CR>:Make!<CR>
+
+" Latex files
+" autocmd! FileType tex noremap <Leader>r <localleader>ll
+" autocmd! FileType tex nnoremap <leader>lf :VimtexForwardSearch<CR>
+
+" BlenderPy files
+autocmd! FileType blenderpy set syntax=python
 "----------------------------------End mappings-------------------
 

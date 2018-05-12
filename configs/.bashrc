@@ -45,3 +45,37 @@ export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib/python:${PYTHONPATH}"
 export LD_LIBRARY_PATH=${EXT}/build/lib:${EXT}/binaries/lib64:${LD_LIBRARY_PATH}
+
+# Bash configs
+# pushd popd magic --
+# https://unix.stackexchange.com/questions/4290/aliasing-cd-to-pushd-is-it-a-good-idea
+pushd()
+{
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}" > /dev/null
+  echo -n "DIRSTACK: "
+  dirs | cut -c 1-80 | awk '{ print "\033[32m"$1"\033[0m \033[31m"$2"\033[00m" }'
+}
+
+pushd_builtin()
+{
+  builtin pushd > /dev/null
+  echo -n "DIRSTACK: "
+  dirs | cut -c 1-80 | awk '{ print "\033[32m"$1"\033[0m \033[31m"$2"\033[00m" }'
+}
+
+popd()
+{
+  builtin popd > /dev/null
+  echo -n "DIRSTACK: "
+  dirs | cut -c 1-80 | awk '{ print "\033[32m"$1"\033[0m \033[31m"$2"\033[00m" }'
+}
+
+alias cd='pushd'
+alias back='popd'
+alias flip='pushd_builtin'
