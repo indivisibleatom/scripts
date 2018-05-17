@@ -29,19 +29,18 @@ if [ -z "${CMDREF_DIR}" ]; then
   export CMDREF_DIR=${DEV}/notes
 fi
 
-export PATH="${PATH}:${TOOLS}/graphicsDebugger"
 export PATH="${PATH}:./node_modules/.bin"
 
 export TEXDOC_VIEWER_PDF="(evince %s) &"
 
 #VTK paths
 export VTK_PATH=/usr/local/VTK
-export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
+#export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
 export LD_LIBRARY_PATH="${VTK_PATH}/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
 #Paths for self-build python modules and related libraries
-export PYTHONPATH="${EXT}/build/lib:${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
-export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
+export PYTHONPATH="${EXT}/build/lib:${PYTHONPATH}"
+#export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib:${PYTHONPATH}"
 export PYTHONPATH="${DEV}/build/Release/lib/python:${PYTHONPATH}"
 export LD_LIBRARY_PATH=${EXT}/build/lib:${EXT}/binaries/lib64:${LD_LIBRARY_PATH}
