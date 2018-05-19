@@ -6,6 +6,7 @@ set nobackup
 set tabstop=2
 set softtabstop=2
 set cursorline
+set lazyredraw
 set expandtab
 set shiftwidth=2
 set shiftround
@@ -71,7 +72,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler_options = '-std=c++14 -Wno-deprecated-declarations'
 let g:syntastic_cpp_no_default_include_dirs = 0
-
 let g:ycm_show_diagnostics_ui = 0
 
 "------------------------------------Mappings---------------------
@@ -107,8 +107,25 @@ noremap <Right> <NOP>
 
 " Quickfix new split
 autocmd! FileType qf noremap <buffer> <Leader><Enter> <C-w><Enter><C-w>L
+" Quickfix close if last
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
 
 " Latex files
+let g:tex_flavor = 'latex'
+let g:tex_fold_enabled = 0
+let g:tex_fast = "cmMprs"
+let g:tex_conceal = ""
+let g:tex_fold_enabled = 0
+let g:tex_comment_nospell = 1
+let g:vimtex_compiler_latexmk = {
+    \ 'background' : 1,
+    \ 'continuous' : 0,
+\}
+let g:vimtex_indent_enabled = 0
+let g:vimtex_view_method = 'zathura'
 " autocmd! FileType tex noremap <Leader>r <localleader>ll
 " autocmd! FileType tex nnoremap <leader>lf :VimtexForwardSearch<CR>
 

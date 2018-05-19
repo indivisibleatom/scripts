@@ -26,6 +26,7 @@ __pycache__
 *.fdb_latexmk
 *.bbl
 *.blg
+*.synctex.gz
 
 # Some Visual Studio temporaries and build locations
 *.pdb
