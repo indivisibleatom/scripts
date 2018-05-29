@@ -13,14 +13,17 @@ sudo apt-get install xdotool
 
 # Utils
 sudo apt-get install ack-grep
-sudo apt-get install blender
-sudo apt-get install meshlab
 sudo apt-get install latexmk
 sudo apt-get install inkscape
 sudo apt-get install krita
 sudo apt-get install meld
 sudo apt-get install git
 sudo apt-get install moreutils
+sudo apt-get install rlwrap
+
+# Level-2 software
+sudo apt-get install blender
+sudo apt-get install meshlab
 
 # Copy over configs 
 copy ${DEV}/scripts/configs/.gbdinit ~/.gdbinit
