@@ -131,5 +131,7 @@ let g:vimtex_view_method = 'zathura'
 
 " BlenderPy files
 autocmd! FileType blenderpy set syntax=python
+" Enable spell-check for markdown
+autocmd BufNewFile,BufRead *.md set ft=markdown spell
 "----------------------------------End mappings-------------------
 
