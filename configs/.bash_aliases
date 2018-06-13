@@ -16,7 +16,7 @@ alias initlatex='cp -P ${DEV}/shared/latex/src/protoDir/* .'
 alias ccViewer='ccViewer.sh'
 alias ack='ack-grep'
 alias xclip='xclip -selection clipboard'
-alias vim='vim --servername VIM'
+#alias vim='vim --servername VIM'
 
 alias b='pushd ${DEV}/experiments/build'
 alias ext='pushd ${DEV}/ext/'
