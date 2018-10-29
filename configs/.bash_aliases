@@ -5,8 +5,8 @@ voglProfile() {
 }
 
 alias ..='cd ..'
-alias pip3='/usr/bin/pip3'
-alias python3='/usr/bin/python3'
+#alias pip3='/usr/bin/pip3'
+#alias python3='/usr/bin/python3'
 alias ipy='ipython3 notebook'
 alias processing='${DEV}/tools/processing-3.3/processing'
 alias n='nautilus >/dev/null 2>&1'
@@ -22,7 +22,9 @@ alias b='pushd ${DEV}/experiments/build'
 alias ext='pushd ${DEV}/ext/'
 alias exp='pushd ${DEV}/experiments/'
 alias avg='pushd ${DEV}/experiments/averaging'
-alias traj='pushd ${DEV}/experiments/planning/trajectoryOptimization'
+alias data='pushd ${DEV}/experiments/data'
+alias trajopt='pushd ${DEV}/experiments/cnc/planning/trajectoryOptimization/trajopt/'
+alias frm='pushd ${DEV}/experiments/framework'
 alias frm='pushd ${DEV}/experiments/framework'
 alias geom='pushd ${DEV}/experiments/framework/geometry'
 alias rndr='pushd ${DEV}/experiments/framework/rendering'
@@ -33,6 +35,9 @@ alias ppr='pushd ${DEV}/papers'
 alias ceed='(pushd ${EXT}/src/ceed/bin; PYTHONPATH=../../cegui/build/lib:../:$PYTHONPATH python2 ./ceed-gui)'
 alias scr='pushd ${DEV}/scripts/'
 alias conf='pushd ${DEV}/scripts/configs'
+alias blender='blender --python ${DEV}/build/Release/lib/python/pyFramework/blender/init_script.py'
+alias geo='${EXT}/binaries/geogebra/GeoGebra'
+alias mathematica='${DEV}/scripts/mathematica_launcher.sh'
 
 alias gprofile=voglProfile
 

@@ -1,5 +1,8 @@
 # Some common folders to exclude
 build/
+local/
+scratch/
+data/
 
 # Some temporary files
 *.*~
@@ -7,11 +10,6 @@ build/
 ## Vim ignores
 *.swp
 *.swo
-
-## Ipython ignores
-*.py[co]
-__pycache__
-.ipynb_checkpoints
 
 ## Latex
 ## Core latex/pdflatex auxiliary files:
@@ -44,10 +42,64 @@ x64/
 *.psess
 *.vspx
 
-## Intermediate documents:
+## Intermediate documents for latex
 *.dvi
 
 ## LibreOffice locks
 *.odp#
 *.odt#
 *.csv#
+
+## Blender temporary file
+*.blend1
+
+# CMake
+cmake-build-*/
+
+###############################################Python################################
+## PyCharm / Jetbrains
+# User-specific stuff
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/**/usage.statistics.xml
+**/.idea/**/dictionaries
+**/.idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+**/.idea/**/dataSources/
+**/.idea/**/dataSources.ids
+**/.idea/**/dataSources.local.xml
+**/.idea/**/sqlDataSources.xml
+**/.idea/**/dynamic.xml
+**/.idea/**/uiDesigner.xml
+**/.idea/**/dbnavigator.xml
+
+# Gradle
+**/.idea/**/gradle.xml
+**/.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+
+# Editor-based Rest Client
+**/.idea/httpRequests
+
+## Python dist builds
+dist/
+_skbuild/
+.gdb_history
+*egg-info/
+*.whl
+
+## Ipython ignores
+*.py[co]
+__pycache__
+.ipynb_checkpoints

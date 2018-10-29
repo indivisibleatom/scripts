@@ -70,9 +70,14 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler_options = '-std=c++14 -Wno-deprecated-declarations'
+let g:syntastic_loc_list_height = 5
+let g:syntastic_cpp_compiler_options = '-std=c++14 -Wno-deprecated-declarations -fvisibility -Wattributes'
 let g:syntastic_cpp_no_default_include_dirs = 0
 let g:ycm_show_diagnostics_ui = 0
+
+"Vim pymode
+let g:pymode_python = 'python3'
+let g:pymode_lint_on_write = 0
 
 "------------------------------------Mappings---------------------
 "Clear spaces with F3
@@ -104,6 +109,12 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" Splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Quickfix new split
 autocmd! FileType qf noremap <buffer> <Leader><Enter> <C-w><Enter><C-w>L

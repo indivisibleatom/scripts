@@ -1,7 +1,9 @@
 # Custom configurations
 export TOOLS=~/tools
 export DEV=~/development
+export DATA=${DEV}/data
 export EXT=${DEV}/ext
+export EXP=${DEV}/experiments
 export SHARED_ROOT=${DEV}/shared
 
 #Set bash mode to vi
@@ -37,11 +39,6 @@ export VTK_PATH=/usr/local/VTK
 export LD_LIBRARY_PATH="${VTK_PATH}/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
 #Paths for self-build python modules and related libraries
-export PYTHONPATH="${EXT}/build/lib:${PYTHONPATH}"
-export PYTHONPATH="${EXT}/build/lib/python3.5/site-packages:${PYTHONPATH}"
-export PYTHONPATH="${DEV}/build/Release/lib:${PYTHONPATH}"
-export PYTHONPATH="${DEV}/build/Release/lib/python:${PYTHONPATH}"
-export PYTHONPATH="${VTK_PATH}/lib/python3.5/site-packages:${PYTHONPATH}"
 export LD_LIBRARY_PATH=${EXT}/build/lib:${EXT}/binaries/lib64:${LD_LIBRARY_PATH}
 
 # Bash configs
