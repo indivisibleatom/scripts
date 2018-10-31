@@ -9,11 +9,11 @@ export SHARED_ROOT=${DEV}/shared
 #Set bash mode to vi
 set -o vi
 
-export PATH="${PATH}:${SHARED_ROOT}/bin"
+export PATH="${PATH}:${SHARED_ROOT}/bin:${DEV}/scripts"
 
 #Custom env variables for different applications
 export TEXMF_ROOT=/usr/local/share/texmf
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}
 export RLWRAP_HOME=${DEV}/tools/rlwrap
