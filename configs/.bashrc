@@ -74,3 +74,18 @@ popd()
 alias cd='pushd'
 alias back='popd'
 alias flip='pushd_builtin'
+
+ackeg() {
+  ack --follow -l $1 ${EXT}/examples --ignore-file=match:/[.]html
+}
+
+acksrc() {
+  if [ $# -eq 1 ]; then
+    DIR="${EXT}/src"
+    STR="$1"
+  else
+    DIR="${EXT}/src/$1"
+    STR="$2"
+  fi
+  ack --follow -l ${STR} ${DIR} --ignore-file=match:/[.]html
+}

@@ -25,7 +25,7 @@ alias avg='pushd ${DEV}/experiments/averaging'
 alias data='pushd ${DEV}/experiments/data'
 alias trajopt='pushd ${DEV}/experiments/cnc/planning/trajectoryOptimization/trajopt/'
 alias frm='pushd ${DEV}/experiments/framework'
-alias frm='pushd ${DEV}/experiments/framework'
+alias frpy='pushd ${DEV}/experiments/framework/python'
 alias geom='pushd ${DEV}/experiments/framework/geometry'
 alias rndr='pushd ${DEV}/experiments/framework/rendering'
 alias inc='pushd ${DEV}/experiments/framework/inc'
@@ -38,6 +38,7 @@ alias conf='pushd ${DEV}/scripts/configs'
 alias blender='blender --python ${DEV}/build/Release/lib/python/pyFramework/blender/init_script.py'
 alias geo='${EXT}/binaries/geogebra/GeoGebra'
 alias mathematica='${DEV}/scripts/mathematica_launcher.sh'
+alias nbclone='cp ${DEV}/experiments/framework/python/ipythonSnippets/mayavi_clone-example.ipynb'
 
 alias gprofile=voglProfile
 
