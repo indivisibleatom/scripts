@@ -40,6 +40,7 @@ export LD_LIBRARY_PATH="${VTK_PATH}/lib:/usr/local/lib:${LD_LIBRARY_PATH}"
 
 #Paths for self-build python modules and related libraries
 export LD_LIBRARY_PATH=${EXT}/build/lib:${EXT}/binaries/lib64:${LD_LIBRARY_PATH}
+export PKG_CONFIG_PATH=${EXT}/build/lib/pkgconfig
 
 # Bash configs
 # pushd popd magic --
